@@ -1,0 +1,108 @@
+\documentclass{article}
+
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+\begin{document}
+
+\title{\textbf{Journal 2}}
+\author{Ahmed Al Guqhaiman}
+\date{\today}
+\maketitle
+\section*{Process and Learning:}
+To start this assignment, I decided to review 50 published papers from the International Conference on UnderWater Networks and Systems (WUWNet). For the last year the WUWNet published 26 papers, so I selected an additional 24 papers from 2016 \cite{WUWNet17, WUWNet16}. I downloaded all the papers and upload them to my Mendeley to read papers in order. Then, I created three subfolders, namely, Trash, Scan, Best. These subfolders helped me to know which papers I trashed, decided to scan, and best papers. The first pass is to browse all papers and decide whether it is related to my research problems or not. If a paper is not related to my research or not providing some results with fair comparison, I trash it.\\ 
+
+To train myself that I should not spend too much time on the first pass, I used the stopwatch to time myself with each paper. The plan with the first pass is to read the papers with no more than two minutes and make a decision. After, reading the first couple of papers I found that it took me more than two minutes \cite{MohammadrezaAlimadadi2017,ChristianSchlegelDmitryTruachevZahraAlavizadeh2017,Olokodana2017}. The reason behind this was that I tried to read the paper not browsing the paper. So, to avoid this issue, I decided to look at the addressed problem and proposed work in the abstract and conclusion sections. I also looked over the headings, images, diagrams, and couple of the first sentence of a paragraph. This helped me to browse papers very quickly. Personally, I get interested with several topics very easily. So, making the decision to scan or trash the paper was another issue. To overcome this issue, I keep ask myself if a paper was related to my research problems, had comparison with the state of the art, and can be applied to other applications. Surprisingly, I found many papers did not compare their proposed work with any other related work. In this case, I can not tell whether the proposed work was better or worse than related work. Thus, it was not worth it to spend additional time to find out.\\
+
+Once I finished browsing, I went to the scan subfolder and read the papers in order between five to ten minutes with paying more attention to the details of the proposed work. I found some authors claimed that full duplex communication is possible in an underwater environment, which is not true. I assume this occurs because to the best of the authors' knowledge that some approaches can not be achieved. This proof to researchers that with reading many research papers, researchers can find some approaches are possible. Reading research papers that are in the field enlighten researchers.\\
+
+The last pass is to read the best papers critically and creatively. I had eight papers to scan and I chose three of them to be the best papers. It was a touch decision to decide which of these papers I should select to be one of the best papers. To differentiate between a great paper and a good one, I used the star on Mendeley. After I finished the second pass, I had five out of eight. Next, I looked over these papers and decide which of these papers would be more beneficial to my research problems. This pass helped me to define my research scope and stay focus on my research problems. Once, I selected the best papers, I read each one and start questioning the proposed work or other related work that might enhance the proposed work. Making notes while reading helped me to learn how things can be achieved, what parameters must be considered to analyze results, and many other things. \\ 
+
+I could not link my overleaf with git, so please click on the following link to find my git repo:
+\url{https://github.com/BoultClasses/Journal-2.git}
+\section*{Raw Notes:}
+Here are my raw notes from \cite{Kim2016}:
+\begin{itemize}
+  \item Compare the cooperative MAC protocol based on reservation access and random access?
+  \item Full duplex operation can be achieved by using multiple channels. One channel for data packets and the other channel for control packets.
+  \item What are the requirements to be a cooperator?
+  \item In case of errors and the destination requests retransmission of missing frames from cooperator. If the closest cooperator can not retransmit the missing frame, does the destination request another request to the second closest cooperator? In such cases like this, I believe if we allow cooperators to communicate with other cooperators (probably the previous cooperator) this will minimize latency and extend network lifetime. 
+  \item Who decides which cooperators meet the requirements?
+  \item Cooperators requirements: 1- Source cooperator distance must be less than the total distance between source and destination. 2- Destination cooperator distance must be less than the total distance between source and destination.
+  \item The source uses the distance as the main parameter to determine the preference list of cooperators. The preferred cooperator is the one that's closer to the destination.
+  \item Repeatedly, the destination must communicate with the next preferred cooperator until it receives the missing frames. A better approach, we should have the cooperators repeatedly ask for the missing frames.
+  \item What is the maximum number of cooperators that give the best result? What are the criteria that should be considered to determine the proper number of cooperators.  
+  \item We should be able to avoid collision if we exchange high number of control packets by using multiple channels.\\
+
+Here are my raw notes from \cite{Rahman2017}:
+  \item Sending multiple data is possible when multiple channels are used. Separate the data channels from control channels. This helps to avoid collisions.
+  \item With acoustic communication, transmitting data is much more expensive than receiving in terms of the energy consumption. So, designing a MAC protocol that can send large number of packets at once better than divide it into multiple transmissions.  
+  \item To increase the channel utilization, send multiple data packets of the same flow in reverse direction. 
+  \item To enhance channel utilization, MAC protocol should reduce the number of handshaking packets.
+  \item Using multiple data channels can also improve channel utilization.
+  \item To avoid collisions in cooperative MAC protocols, multiple channels should avoid this issue.
+  \item Designing a MAC protocol with set of states helps to avoid collisions and other networking issues.
+  \item To enable multi-flow MAC protocol, each node must be equipped with an omni-directional half duplex acoustic modem.
+  \item A MAC protocol with cross-layer information can help nodes to decide which should be involved in the forwarding process. this information can also be used to avoid collisions. 
+  \item To exchange, cross-layer information, what kind of information is required to avoid collisions?
+  \item The distance is the primary parameter to determine the best path. 
+  \item If we use the piggyback ride technique to retransmit missing packets, will this increase the channel utilization? /What are the consequences of using the piggyback ride for missing packets/control packets, data packets? 
+  \item To analyze throughput, use different loads, different distance between nodes, and number of flows.
+  \item reducing channel reservation overhead can help to improve channel utilization.
+  \item The higher the distance between nodes, the lower the throughput. The distance between nodes play a key role here. So, finding the ideal distance between nodes need closer attention. 
+  \item The higher number of flows, the lower the throughput. the number of flows to send packets should be minimized.
+  \item To analyze latency, you should test the environment with different number of hops, different distances, and different number of flows. 
+  \item The higher number of hops between source and destination, the higher delay. What other consequences with short path and long path?
+  \item Using the CTS packet should be sufficient to send data packets in reverse direction. This means, sending data packets in the reverse direction, do not need separate control packets. This reduces control packet overhead. \\
+  
+Here are my raw notes from  \cite{PurobiRahmanMohammadShahAlamShamimAraShawkat2017}:
+  \item Multi-channel communication increases throughput, but cause the possibility of collisions due to the hidden terminal problem.
+  \item Triple Hidden Terminal (THT) problem, collision could happen due to multi-hop, multi-channel communication with long propagation delay.
+  \item Current MAC protocols mitigate THT problem without considering the propagation delay that affect performance of UWSN significantly. 
+  \item CAM is used to estimate the propagation delay to enhance the channel utilization.
+  \item Each node has  delay mapping database based on sender and receiver scheduling algorithm before initiating any transmission.
+  \item Simulation show that the proposed work outperforms CUMAC protocol in terms of network throughput, energy consumption, end-to-end delay, and PDR.
+  \item Most papers focus on single-channel network.
+  \item Transmitting data is almost 100 times more expensive than receiving data in terms on energy consumption.
+  \item UMMAC is based on slot reservation to avoid collision.
+  \item DOTS MAC protocol is used for minimizing the impact of long propagation delay and limited bandwidth. 
+  \item DOTS allow multiple nodes to send data simultaneously over a single channel with no collision.
+  \item HTH includes three types: a) multi-hop hidden terminal problem (traditional) b) multi-channel hidden terminal and c) long-delay hidden terminal problem.
+  \item CUMAC detect collision by using a simple tone device by utilizing the cooperation of neighbor nodes.
+  \item One Control Channel (CC) and two Data Channels (DC).
+  \item Proposed work is an enhanced version of CUMAC with integrating propagation delay mapping and channel allocation assessment.
+  \item Authors assumes here the nodes are static and uniformly distributed.
+  \item One control channel and two data channels have the same bandwidth.
+  \item A node can work either on control channel or data channel, but not on both at a time. Will multiple acoustic transceiver enhance the work? What are the pros and cons of this approach?
+  \item Every node maintains a CAM and delay map database.
+  \item Each node maintains delay map by overhearing neighbor node transmissions.
+  \item Time synchronization among all nodes underwater is hard. There is a need to study how accurate the time synchronization among all nodes.
+  \item The purpose of cooperative update is to give updated information on channel allocation to avoid multichannel hidden terminal problem.
+  \item Using the random back-off algorithm to send update packets can mitigate update packet collision.
+  \item If any data channel is not used by verifying via CAM that is not occupied by any other users, then the sender node will start the RTS/CTS handshaking process over the control channel.
+  \item If there is no data channel is available, sender needs to check the occupied channels information from CAM. Next, it needs to run the transmission scheduling algorithm with delay map database. The scheduling algorithm  guides the sender to select the appropriate channel without colliding with one-hop neighbor node.
+  \item Data channel is waiting for data. it uses a timer, if it does not receive any packet, it switch back to the control channel. 
+  \item With the help of CAM and delay database, this scheme helps to avoid collisions at both sender and receiver end.
+  \item CUMAC protocol compare its results with CUMAC in terms of average network throughput, average energy consumption, end-to-end delay, and PDR.
+  \item Simulated in NS-2 and the simulations are based on random network topology. 
+  \item Throughput increases significantly with sending more packets/second.
+  \item Impact of number of channels to the network throughput.
+  \item Why CUMAC-CAM provides better results?
+  \item Impact of data packet size to the network throughput.
+  \item Impact of number of channels to the energy consumptions.
+  \item Impact of input traffic to the energy consumption. Energy consumption decreases with the increase of input traffic.
+  \item Impact of data packet size to the energy consumption. Energy consumption decreases with the increase of data packet size.
+  \item The impact of number of channels and data packet size should be investigated to the end-to-end delay.
+  \item PDR decreases with the increasing of number of nodes. The impact of number of nodes to other network performance metrics should be tested. 
+  \item The impacts of input traffic, number of channels, and data packet size should be investigated to the PDR.
+\end{itemize} 
+
+\clearpage
+\nocite{*}
+\bibliographystyle{ieeetr}
+\bibliography{Bibliography}
+
+\end{document}
